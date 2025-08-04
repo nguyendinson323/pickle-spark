@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Shield, Target, Users, Award } from "lucide-react";
+import governanceImage from "@/assets/about-governance.jpg";
 
 const About = () => {
   const values = [
@@ -41,17 +42,26 @@ const About = () => {
             </p>
           </div>
 
-          {/* Mission Statement */}
+          {/* Mission Statement with Image */}
           <div className="mb-16">
-            <Card className="bg-card shadow-elegant hover-lift animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
-              <CardContent className="p-8 text-center">
-                <h3 className="text-2xl font-bold text-primary mb-4">Our Mission</h3>
-                <p className="text-lg text-card-foreground leading-relaxed">
-                  To establish pickleball as Mexico's premier racquet sport by providing world-class 
-                  governance, fostering competitive excellence, and building an inclusive community 
-                  that welcomes players of all skill levels and backgrounds.
-                </p>
-              </CardContent>
+            <Card className="bg-card shadow-elegant hover-lift animate-fade-in-up overflow-hidden" style={{ animationDelay: "0.4s" }}>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
+                <div className="aspect-video lg:aspect-square">
+                  <img 
+                    src={governanceImage} 
+                    alt="Federation governance meeting" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <CardContent className="p-8 flex flex-col justify-center">
+                  <h3 className="text-2xl font-bold text-primary mb-4">Our Mission</h3>
+                  <p className="text-lg text-card-foreground leading-relaxed">
+                    To establish pickleball as Mexico's premier racquet sport by providing world-class 
+                    governance, fostering competitive excellence, and building an inclusive community 
+                    that welcomes players of all skill levels and backgrounds.
+                  </p>
+                </CardContent>
+              </div>
             </Card>
           </div>
 

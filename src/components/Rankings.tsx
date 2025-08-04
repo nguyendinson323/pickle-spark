@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Trophy, TrendingUp, TrendingDown, Minus, Medal, Star } from "lucide-react";
+import rankingsImage from "@/assets/rankings-champion.jpg";
 
 const Rankings = () => {
   const topPlayers = [
@@ -84,15 +85,26 @@ const Rankings = () => {
     <section id="rankings" className="py-20 bg-background">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
-          {/* Section Header */}
+          {/* Section Header with Champion Image */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 animate-fade-in-up">
-              National Rankings
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-              Official rankings updated in real-time after every tournament. 
-              See where you stand among Mexico's best pickleball players
-            </p>
+            <div className="flex flex-col lg:flex-row items-center gap-8 mb-8">
+              <div className="lg:w-1/3">
+                <img 
+                  src={rankingsImage} 
+                  alt="Championship trophy winner" 
+                  className="w-full max-w-sm mx-auto h-auto rounded-lg shadow-elegant animate-fade-in-left"
+                />
+              </div>
+              <div className="lg:w-2/3 text-left lg:text-left animate-fade-in-right" style={{ animationDelay: "0.2s" }}>
+                <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+                  National Rankings
+                </h2>
+                <p className="text-xl text-muted-foreground">
+                  Official rankings updated in real-time after every tournament. 
+                  See where you stand among Mexico's best pickleball players
+                </p>
+              </div>
+            </div>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">

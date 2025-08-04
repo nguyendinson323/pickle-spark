@@ -2,6 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, MapPin, Users, Trophy } from "lucide-react";
+import tournamentImage from "@/assets/tournament-action.jpg";
 
 const Tournaments = () => {
   const upcomingTournaments = [
@@ -71,12 +72,19 @@ const Tournaments = () => {
     <section id="tournaments" className="py-20 bg-gradient-card">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
-          {/* Section Header */}
+          {/* Section Header with Hero Image */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 animate-fade-in-up">
+            <div className="max-w-4xl mx-auto mb-8 animate-fade-in-up">
+              <img 
+                src={tournamentImage} 
+                alt="Pickleball tournament action" 
+                className="w-full h-64 md:h-80 object-cover rounded-lg shadow-elegant"
+              />
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
               Upcoming Tournaments
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
               Join Mexico's premier pickleball tournaments and compete against 
               the nation's top players in official sanctioned events
             </p>

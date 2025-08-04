@@ -2,6 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, Clock, User, ArrowRight } from "lucide-react";
+import newsImage from "@/assets/news-interview.jpg";
 
 const News = () => {
   const newsItems = [
@@ -95,13 +96,20 @@ const News = () => {
             {/* Featured Article */}
             {featuredNews && (
               <div className="lg:col-span-2">
-                <Card className="bg-card shadow-elegant hover-lift group cursor-pointer animate-fade-in-left" style={{ animationDelay: "0.4s" }}>
-                  <div className="aspect-video bg-gradient-primary rounded-t-lg flex items-center justify-center">
-                    <div className="text-center text-primary-foreground p-8">
-                      <Badge className="mb-4 bg-secondary text-secondary-foreground">
-                        Featured
-                      </Badge>
-                      <h3 className="text-2xl font-bold mb-4">{featuredNews.title}</h3>
+                <Card className="bg-card shadow-elegant hover-lift group cursor-pointer animate-fade-in-left overflow-hidden" style={{ animationDelay: "0.4s" }}>
+                  <div className="aspect-video relative">
+                    <img 
+                      src={newsImage} 
+                      alt="Sports news interview" 
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end">
+                      <div className="text-left text-white p-8 w-full">
+                        <Badge className="mb-4 bg-secondary text-secondary-foreground">
+                          Featured
+                        </Badge>
+                        <h3 className="text-2xl font-bold mb-4">{featuredNews.title}</h3>
+                      </div>
                     </div>
                   </div>
                   <CardContent className="p-6">

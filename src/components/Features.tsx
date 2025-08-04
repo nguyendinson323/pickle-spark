@@ -10,6 +10,7 @@ import {
   ShoppingCart,
   BarChart3 
 } from "lucide-react";
+import featuresImage from "@/assets/features-app.jpg";
 
 const Features = () => {
   const features = [
@@ -67,15 +68,22 @@ const Features = () => {
     <section id="features" className="py-20 bg-background">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
-          {/* Section Header */}
+          {/* Section Header with Image */}
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 animate-fade-in-up">
               Comprehensive Platform Features
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in-up mb-8" style={{ animationDelay: "0.2s" }}>
               Everything you need to play, compete, and excel in pickleball - 
               all in one integrated platform
             </p>
+            <div className="max-w-md mx-auto animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
+              <img 
+                src={featuresImage} 
+                alt="Pickleball app features" 
+                className="w-full h-auto rounded-lg shadow-elegant"
+              />
+            </div>
           </div>
 
           {/* Features Grid */}
